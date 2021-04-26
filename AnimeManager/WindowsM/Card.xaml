@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="AnimeManager.WindowsM.Card"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AnimeManager.WindowsM"
+             xmlns:AduSkin="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Border Style="{StaticResource ShowControlBorder}">
+            <StackPanel>
+                <AduSkin:MetroImage Margin="0,5,0,0" Name="Image" RenderOptions.BitmapScalingMode="Fant"/>
+                <Label Content="动画标题动画标题" Name="ProjectName"></Label>
+                <AduSkin:AduComboBox HorizontalAlignment="Right" Name="ComBoBox">
+                    <ComboBoxItem Content="无" Name="NONE" Tag="1" IsSelected="True"/>
+                    <ComboBoxItem Content="编辑" Name="EDIT" Tag="1"/>
+                    <ComboBoxItem Content="打开文件路径" Name="OPEN" Tag="1" />
+                    <ComboBoxItem Content="删除" Name="DEL" Tag="1" />
+                </AduSkin:AduComboBox>
+                <AduSkin:MetroRichTextBox
+                                                            MaxHeight="100"
+                                                            Margin="5"
+                                                            Background="#00000000"
+                                                            BorderThickness="0"
+                                                            CornerRadius="0"
+                                                            IsEnabled="False">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text="修改外观的 MetroRichTextBox" />
+                        </Paragraph>
+                        <Paragraph>
+                            <Run Text="禁用" />
+                        </Paragraph>
+                    </FlowDocument>
+                </AduSkin:MetroRichTextBox>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>
